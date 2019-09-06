@@ -1,5 +1,6 @@
 from animals import RiverDolphin
 
+
 def release_animal(arboretum):
     animal = None
 
@@ -13,7 +14,6 @@ def release_animal(arboretum):
 
     if choice == "2":
         pass
-
 
     for index, river in enumerate(arboretum.rivers):
         print(f'{index + 1}. River {river.id}')

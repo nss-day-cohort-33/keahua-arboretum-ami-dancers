@@ -1,5 +1,6 @@
 from .aquatic import IAquatic
 
+
 class ISaltwater(IAquatic):
 
     def __init__(self):
