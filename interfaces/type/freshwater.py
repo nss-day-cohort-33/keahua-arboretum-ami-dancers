@@ -1,5 +1,6 @@
 from interfaces.aquatic import IAquatic
 
+
 class IFreshwater(IAquatic):
 
     def __init__(self):

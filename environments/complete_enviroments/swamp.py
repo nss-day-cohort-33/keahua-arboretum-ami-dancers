@@ -1,6 +1,5 @@
 import sys
 sys.path.append('../')
-
 from environments.environment import Environment
 from interfaces.habitats import IStagnant
 # from animals.
@@ -9,8 +8,8 @@ from interfaces.habitats import IStagnant
 class Swamp(Environment):
 
     def __init__(self, name):
-      self.name = name
-      self.inhabitants = []
+        self.name = name
+        self.inhabitants = []
 
     def animal_count(self):
         return "This place has a bunch of animals in it"
