@@ -1,2 +1,3 @@
 from .animal import Animal
-from .river_dolphin import RiverDolphin
+from .complete_animals.river_dolphin import RiverDolphin
+from .contains_animals import IContainsAnimals

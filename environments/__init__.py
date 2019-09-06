@@ -1,1 +1,1 @@
-from .river import River
+from .complete_environments.river import River
