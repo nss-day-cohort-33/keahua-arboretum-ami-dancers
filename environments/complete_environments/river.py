@@ -1,7 +1,7 @@
 from interfaces import IAquatic
 from interfaces import Identifiable
-from interfaces import IContainsAnimals
-from interfaces import IContainsPlants
+from animals import IContainsAnimals
+from plants.contains_plants import IContainsPlants
 from animals import RiverDolphin
 
 
