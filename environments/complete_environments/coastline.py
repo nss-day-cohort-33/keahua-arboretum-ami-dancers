@@ -1,5 +1,3 @@
-import sys
-sys.path.append('../')
 from interfaces import Identifiable
 from environments import Environments
 
@@ -12,7 +10,7 @@ class Coastline(Environments, Identifiable):
 
     def add_animal(self, animal):
         try:
-            if animal.aquatic and animal.cell_type == "hypotonic":
+            if animal.aquatic and animal.hypotonic:
                 self.contains_animals.append(animal)
         except AttributeError:
             raise AttributeError("Cannot add non-aquatic, or freshwater animals to a river")

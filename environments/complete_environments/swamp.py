@@ -1,5 +1,4 @@
-import sys
-sys.path.append('../')
+
 from environments import Environments
 from interfaces import Identifiable
 # from interfaces.habitats import IStagnant

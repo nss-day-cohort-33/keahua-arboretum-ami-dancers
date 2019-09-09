@@ -1,5 +1,4 @@
-import sys
-sys.path.append('../')
+
 from interfaces import Identifiable
 from environments import Environments
 
