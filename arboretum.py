@@ -4,3 +4,7 @@ class Arboretum:
         self.address = address
         self.rivers = []
         self.grasslands = []
+        self.mountains = []
+        self.forests = []
+        self.swamps = []
+        self.coastlines = []
