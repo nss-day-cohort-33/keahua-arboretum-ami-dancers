@@ -1,6 +1,4 @@
-import sys
-sys.path.append('../')
-from interfaces import IAquatic
+
 from interfaces import Identifiable
 from environments import Environments
 from animals import RiverDolphin
@@ -14,7 +12,7 @@ class River(Environments, Identifiable):
 
     def add_animal(self, animal):
         try:
-            if animal.aquatic and animal.cell_type == "hypertonic":
+            if animal.aquatic and animal.hypertonic:
                 self.contains_animals.append(animal)
         except AttributeError:
             raise AttributeError("Cannot add non-aquatic, or saltwater animals to a river")
