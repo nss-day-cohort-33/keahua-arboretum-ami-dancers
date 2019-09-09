@@ -1,5 +1,5 @@
 import os
-from environments import River
+from environments.complete_environments import River
 
 
 def annex_habitat(arboretum):

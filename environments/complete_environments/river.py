@@ -1,13 +1,15 @@
+import sys
+sys.path.append('../')
 from interfaces import IAquatic
 from interfaces import Identifiable
-from environments.complete_environments import Environment
+from environments import Environments
 from animals import RiverDolphin
 
 
-class River(Environment, Identifiable):
+class River(Environments, Identifiable):
 
     def __init__(self):
-        Environment.__init__(self, "river")
+        Environments.__init__(self, "river")
         Identifiable.__init__(self)
 
     def add_animal(self, animal):

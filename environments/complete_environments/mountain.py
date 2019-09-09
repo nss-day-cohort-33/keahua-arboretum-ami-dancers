@@ -1,11 +1,13 @@
+import sys
+sys.path.append('../')
 from interfaces import Identifiable
-from environments.complete_environments import Environment
+from environments import Environments
 
 
-class Mountain(Environment, Identifiable):
+class Mountain(Environments, Identifiable):
 
     def __init__(self):
-        Environment.__init__(self, "mountain")
+        Environments.__init__(self, "mountain")
         Identifiable.__init__(self)
 
     def add_animal(self, animal):

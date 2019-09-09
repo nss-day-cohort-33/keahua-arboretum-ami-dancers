@@ -1,14 +1,16 @@
 import sys
 sys.path.append('../')
-from environments.complete_environments import Environment
+from environments import Environments
+from interfaces import Identifiable
 # from interfaces.habitats import IStagnant
 
 
 
-class Swamp(Environment):
+class Swamp(Environments, Identifiable):
 
     def __init__(self):
-        Environment.__init__(self, "swamp")
+        Environments.__init__(self, "swamp")
+        Identifiable.__init__(self)
 
     def add_animal(self, animal):
         try:
