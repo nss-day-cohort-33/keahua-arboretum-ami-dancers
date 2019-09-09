@@ -1,23 +1,26 @@
 import sys
 sys.path.append('../')
-from environments.environment import Environment
-from interfaces.habitats import IStagnant
-# from animals.
+from environments.complete_environments import Environment
+# from interfaces.habitats import IStagnant
+
 
 
 class Swamp(Environment):
 
-    def __init__(self, name):
-        self.name = name
-        self.inhabitants = []
+    def __init__(self):
+        Environment.__init__(self, "swamp")
 
-    def animal_count(self):
-        return "This place has a bunch of animals in it"
+    def add_animal(self, animal):
+        try:
+            if animal.stagnant:
+                self.contains_animals.append(animal)
+        except AttributeError:
+            raise AttributeError("Cannot add animals that need flowing water to the swamp.")
 
-    def addInhabitant(self, item):
-        if not isinstance(item, IStagnant):
-            raise TypeError(f"{item} is not of type IStagnant")
-        self.inhabitants.append(item)
+    def add_plant(self, plant):
+        try:
+            if plant.stagnant:
+                self.contains_plants.append(plant)
+        except AttributeError:
+            raise AttributeError("Cannot add plants that require flowing water")
 
-    def __str__(self):
-        return self.name
