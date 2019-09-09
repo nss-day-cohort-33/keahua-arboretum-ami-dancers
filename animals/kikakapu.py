@@ -1,15 +1,15 @@
 from animals import Animal
 from interfaces.type import IFreshwater
-from interfaces.type import ISaltwater
+from interfaces.type import IStagnate
 from interfaces import Identifiable
 
 
-class RiverDolphin(Animal, IFreshwater, ISaltwater, Identifiable):
+class Kikakapu(Animal, IFreshwater,IStagnate, Identifiable):
 
     def __init__(self):
-        Animal.__init__(self, "River dolphin", 13)
+        Animal.__init__(self, "Kikakapu", 1)
         IFreshwater.__init__(self)
-        ISaltwater.__init__(self)
+        IStagnate.__init__(self)
         Identifiable.__init__(self)
         self.__prey = {"Trout", "Mackarel", "Salmon", "Sardine"}
 
@@ -18,7 +18,7 @@ class RiverDolphin(Animal, IFreshwater, ISaltwater, Identifiable):
         return self.__prey
 
     def feed(self, prey):
-        print(f'The dolphin ate {prey} for a meal')
+        print(f"The Kikakapu ate {prey} for a meal")
 
     def __str__(self):
-        return f'Dolphin {self.id}. REEEEEeee EeeEEeeeeEE!'
+        return f"Kikakapu {self.id}. Fish don't make noise, dummy."
