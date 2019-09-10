@@ -14,11 +14,11 @@ class Mountain(Environments, Identifiable):
             if animal.terrestrial and animal.rocky:
                 self.contains_animals.append(animal)
         except AttributeError:
-            raise AttributeError("Cannot add aquatic, or animals that require vegetation")
+            print("Cannot add aquatic, or animals that require vegetation")
 
     def add_plant(self, plant):
         try:
             if plant.rocky:
                 self.contains_plants.append(plant)
         except AttributeError:
-            raise AttributeError("Cannot add plants flat land or flowing water.")
+            print("Cannot add plants flat land or flowing water.")
