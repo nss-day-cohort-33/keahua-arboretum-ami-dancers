@@ -1,4 +1,6 @@
 import os
+
+# from .index import main_menu
 from environments.complete_environments import River
 from environments.complete_environments import Swamp
 from environments.complete_environments import Coastline
@@ -16,7 +18,7 @@ def annex_habitat(arboretum):
     print("5. Mountain")
     print("6. Forest")
     print("7. Back")
-    
+
 
     choice = input("Choose your habitat > ")
 
@@ -40,6 +42,7 @@ def annex_habitat(arboretum):
         arboretum.forests.append(forest)
     if choice == "7":
         pass
+        # main_menu()
     if choice != "7":
         annex_habitat(arboretum)
-    
+
