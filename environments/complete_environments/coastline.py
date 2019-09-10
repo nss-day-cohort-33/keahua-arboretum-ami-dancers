@@ -13,7 +13,7 @@ class Coastline(Environments, Identifiable):
             if animal.aquatic and animal.hypotonic:
                 self.contains_animals.append(animal)
         except AttributeError:
-            raise AttributeError("Cannot add non-aquatic, or freshwater animals to a river")
+            print("Cannot add non-aquatic, or freshwater animals to a river")
 
     # def add_plant(self, plant):
     #     try:

@@ -15,7 +15,7 @@ class River(Environments, Identifiable):
             if animal.aquatic and animal.hypertonic:
                 self.contains_animals.append(animal)
         except AttributeError:
-            raise AttributeError("Cannot add non-aquatic, or saltwater animals to a river")
+            print("Cannot add non-aquatic, or saltwater animals to a river")
 
     # def add_plant(self, plant):
     #     try:
