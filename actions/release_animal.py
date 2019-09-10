@@ -97,5 +97,6 @@ def release_animal(arboretum):
     if choice2 == "7":
         pass
         # main_menu()
-    if choice != "7":
+    if choice2 != "7":
         pass
+ 
