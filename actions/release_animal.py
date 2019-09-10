@@ -49,9 +49,34 @@ def release_animal(arboretum):
     for index, river in enumerate(arboretum.rivers):
         print(f'{index + 1}. River {river.id}')
 
+    for index, grassland in enumerate(arboretum.grasslands):
+        print(f'{index + 1}. Grassland {grassland.id}')
+
+    for index, mountain in enumerate(arboretum.mountains):
+        print(f'{index + 1}. Mountain {mountain.id}')
+
+    for index, forest in enumerate(arboretum.forests):
+        print(f'{index + 1}. Forest {forest.id}')
+
+    for index, swamp in enumerate(arboretum.swamps):
+        print(f'{index + 1}. Swamp {swamp.id}')
+
+    for index, coastline in enumerate(arboretum.coastlines):
+        print(f'{index + 1}. Coastline {coastline.id}')
+
     print("Release the animal into which biome?")
     choice = input("> ")
 
-    arboretum.rivers[int(choice) - 1].animals.append(animal)
+    arboretum.rivers[int(choice) - 1].contains_animals.append(animal)
+
+    arboretum.grasslands[int(choice) - 1].contains_animals.append(animal)
+
+    arboretum.mountains[int(choice) - 1].contains_animals.append(animal)
+
+    arboretum.forests[int(choice) - 1].contains_animals.append(animal)
+
+    arboretum.swamps[int(choice) - 1].contains_animals.append(animal)
+
+    arboretum.coastlines[int(choice) - 1].contains_animals.append(animal)
 
 
