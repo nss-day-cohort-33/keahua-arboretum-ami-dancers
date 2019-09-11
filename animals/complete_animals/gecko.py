@@ -16,7 +16,7 @@ class Gecko(Animal, ICanopy, Identifiable):
         return self.__prey
 
     def feed(self, prey):
-        print(f'The Gecko ate {prey} for a meal')
+        print(f'The Gecko ate the {prey} for a meal')
 
     def __str__(self):
         return f'Gecko {self.id}. I can help you save a bunch of money on your car insurance by switching to Geico.'

@@ -41,6 +41,5 @@ def annex_habitat(arboretum):
         arboretum.forests.append(forest)
     if choice == "7":
         pass
-        # main_menu()
     if choice != "7":
         annex_habitat(arboretum)

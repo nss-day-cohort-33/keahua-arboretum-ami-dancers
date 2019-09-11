@@ -18,7 +18,7 @@ class RiverDolphin(Animal, IFreshwater, ISaltwater, Identifiable):
         return self.__prey
 
     def feed(self, prey):
-        print(f'The dolphin ate {prey} for a meal')
+        print(f'The dolphin ate the {prey} for a meal')
 
     def __str__(self):
         return f'Dolphin {self.id}. REEEEEeee EeeEEeeeeEE!'

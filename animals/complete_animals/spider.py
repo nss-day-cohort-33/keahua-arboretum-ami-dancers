@@ -16,7 +16,7 @@ class Spider(Animal, IStagnate, Identifiable):
         return self.__prey
 
     def feed(self, prey):
-        print(f'The Spider ate {prey} for a meal')
+        print(f'The Spider ate the {prey} for a meal')
 
     def __str__(self):
         return f'Spider {self.id}. Salutations.'
