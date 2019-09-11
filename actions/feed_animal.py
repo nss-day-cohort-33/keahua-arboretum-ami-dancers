@@ -64,7 +64,7 @@ def show_species(arboretum, species):
         for animal in coastline.contains_animals:
             if animal.species == species:
                 species_list.append(animal)
-    if len(species_list) < 0:
+    if len(species_list) == 0:
         print(f'There are no {animal.species} in {arboretum.name}. Please pick a different species to feed.\n')
 
     else:
@@ -72,7 +72,7 @@ def show_species(arboretum, species):
         for index, animal in enumerate(species_list):
             print(f'\n{index+1}. {animal.species} ({animal.id})')
 
-        choice2 = input(f'\nChoose which {animal.species} to feed >')
+        choice2 = input(f'\nChoose which {species} to feed >')
 
         if choice2 == choice2:
             for index, food in enumerate(animal.prey):
