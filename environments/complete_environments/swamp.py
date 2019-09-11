@@ -11,7 +11,7 @@ class Swamp(Environments, Identifiable):
         Identifiable.__init__(self)
 
     def add_animal(self, animal):
-        if len(self.contains_animals) < 9:
+        if len(self.contains_animals) < 8:
             try:
                 if animal.stagnate:
                     self.contains_animals.append(animal)
@@ -21,7 +21,7 @@ class Swamp(Environments, Identifiable):
             print("This biome contains too many animals.")
 
     def add_plant(self, plant):
-        if len(self.contains_plants) < 13:
+        if len(self.contains_plants) < 12:
             try:
                 if plant.stagnate:
                     self.contains_plants.append(plant)

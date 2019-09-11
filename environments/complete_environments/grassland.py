@@ -10,7 +10,7 @@ class Grassland(Environments, Identifiable):
         Identifiable.__init__(self)
 
     def add_animal(self, animal):
-        if len(self.contains_animals) < 23:
+        if len(self.contains_animals) < 22:
             try:
                 if animal.terrestrial and animal.flat:
                     self.contains_animals.append(animal)
@@ -20,7 +20,7 @@ class Grassland(Environments, Identifiable):
             print("This biome contains too many animals.")
 
     def add_plant(self, plant):
-        if len(self.contains_plants) < 16:
+        if len(self.contains_plants) < 15:
             try:
                 if plant.flat:
                     self.contains_plants.append(plant)

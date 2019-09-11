@@ -10,7 +10,7 @@ class Mountain(Environments, Identifiable):
         Identifiable.__init__(self)
 
     def add_animal(self, animal):
-        if len(self.contains_animals) < 7:
+        if len(self.contains_animals) < 6:
             try:
                 if animal.terrestrial and animal.rocky:
                     self.contains_animals.append(animal)
@@ -20,7 +20,7 @@ class Mountain(Environments, Identifiable):
             print("This biome contains too many animals.")
 
     def add_plant(self, plant):
-        if len(self.contains_plants) < 5:
+        if len(self.contains_plants) < 4:
             try:
                 if plant.rocky:
                     self.contains_plants.append(plant)

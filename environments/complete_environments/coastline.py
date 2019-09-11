@@ -9,7 +9,7 @@ class Coastline(Environments, Identifiable):
         Identifiable.__init__(self)
 
     def add_animal(self, animal):
-        if len(self.contains_animals) < 16:
+        if len(self.contains_animals) < 15:
             try:
                 if animal.aquatic and animal.hypotonic:
                     self.contains_animals.append(animal)

@@ -10,7 +10,7 @@ class Forest(Environments, Identifiable):
         Identifiable.__init__(self)
 
     def add_animal(self, animal):
-        if len(self.contains_animals) < 21:
+        if len(self.contains_animals) < 20:
             try:
                 if animal.terrestrial and animal.canopy:
                     self.contains_animals.append(animal)
@@ -20,7 +20,7 @@ class Forest(Environments, Identifiable):
             print("This biome contains too many animals.")
 
     def add_plant(self, plant):
-        if len(self.contains_plants) < 33:
+        if len(self.contains_plants) < 32:
             try:
                 if plant.canopy:
                     self.contains_plants.append(plant)

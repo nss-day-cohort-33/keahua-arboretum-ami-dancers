@@ -11,7 +11,7 @@ class River(Environments, Identifiable):
         Identifiable.__init__(self)
 
     def add_animal(self, animal):
-        if len(self.contains_animals) < 13:
+        if len(self.contains_animals) < 12:
             try:
                 if animal.aquatic and animal.hypertonic:
                     self.contains_animals.append(animal)
