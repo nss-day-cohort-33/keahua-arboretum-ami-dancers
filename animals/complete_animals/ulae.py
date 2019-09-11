@@ -16,7 +16,7 @@ class Ulae(Animal, ISaltwater, Identifiable):
         return self.__prey
 
     def feed(self, prey):
-        print(f"The 'Ulae ate the {prey} for a meal")
+        print(f"\nThe 'Ulae ate the {prey} for a meal")
 
     def __str__(self):
-        return f"'Ulae {self.id}. Fish don't make noise, dummy."
+        return f"\n'Ulae {self.id}. Fish don't make noise, dummy."
