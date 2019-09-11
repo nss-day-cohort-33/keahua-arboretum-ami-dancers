@@ -18,7 +18,7 @@ class Pueo(Animal, ICanopy, IFlat, Identifiable):
         return self.__prey
 
     def feed(self, prey):
-        print(f'The Pueo ate the {prey} for a meal')
+        print(f'\nThe Pueo ate the {prey} for a meal')
 
     def __str__(self):
-        return f'Pueo {self.id}. Whooooo Whooo.'
+        return f'\nPueo {self.id}. Whooooo Whooo.'

@@ -18,7 +18,7 @@ class Opeapea(Animal, IRocky, ICanopy, Identifiable):
         return self.__prey
 
     def feed(self, prey):
-        print(f'The Opeapea ate the {prey} for a meal')
+        print(f'\nThe Opeapea ate the {prey} for a meal')
 
     def __str__(self):
-        return f'Opeapea {self.id}. Sonar noise Sonar noise.'
+        return f'\nOpeapea {self.id}. Sonar noise Sonar noise.'
