@@ -18,7 +18,7 @@ class Kikakapu(Animal, IFreshwater,IStagnate, Identifiable):
         return self.__prey
 
     def feed(self, prey):
-        print(f"The Kikakapu ate {prey} for a meal")
+        print(f"The Kikakapu ate the {prey} for a meal")
 
     def __str__(self):
         return f"Kikakapu {self.id}. Fish don't make noise, dummy."

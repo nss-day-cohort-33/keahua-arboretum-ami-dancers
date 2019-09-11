@@ -17,6 +17,7 @@ def feed_animal(arboretum):
     print("6. Nene Goose")
     print("7. Kikakapu")
     print("8. Hawaiian Happy Face Spider")
+    print("9. Back")
 
     choice = input("\nChoose species to feed > ")
 
@@ -37,6 +38,8 @@ def feed_animal(arboretum):
         show_species(arboretum, "Kikakapu")
     if choice == "8":
         show_species(arboretum, "Hawaiian Happy Face Spider")
+    if choice == "9":
+        pass
 
 def show_species(arboretum, species):
     species_list = []
@@ -65,7 +68,8 @@ def show_species(arboretum, species):
             if animal.species == species:
                 species_list.append(animal)
     if len(species_list) == 0:
-        print(f'There are no {animal.species} in {arboretum.name}. Please pick a different species to feed.\n')
+        print(f'There are no {species}s in {arboretum.name}. Please pick a different species to feed.\n')
+        feed_animal(arboretum)
 
     else:
         food_items = []
