@@ -84,7 +84,7 @@ def release_into_enviroment(animal, arboretum):
             release_animal(arboretum)
         else:
             for index, river in enumerate(arboretum.rivers):
-                print(f'{index + 1}. River {river.id}\n')
+                print(f'{index + 1}. River ({len(river.contains_animals)} animals) {river.id}\n')
             print("Release the animal into which biome?")
             choice = input("> ")
             arboretum.rivers[int(choice) - 1].add_animal(animal)
@@ -95,7 +95,7 @@ def release_into_enviroment(animal, arboretum):
             release_animal(arboretum)
         else:
             for index, swamp in enumerate(arboretum.swamps):
-                print(f'{index + 1}. Swamp {swamp.id}')
+                print(f'{index + 1}. Swamp ({len(swamp.contains_animals)} animals) {swamp.id}')
             print("Release the animal into which biome?")
             choice = input("> ")
             arboretum.swamps[int(choice) - 1].add_animal(animal)
@@ -105,7 +105,7 @@ def release_into_enviroment(animal, arboretum):
             release_animal(arboretum)
         else:
             for index, coastline in enumerate(arboretum.coastlines):
-                print(f'{index + 1}. Coastline {coastline.id}')
+                print(f'{index + 1}. Coastline ({len(coastline.contains_animals)} animals) {coastline.id}')
             print("Release the animal into which biome?")
             choice = input("> ")
             arboretum.coastlines[int(choice) - 1].add_animal(animal)
@@ -115,7 +115,7 @@ def release_into_enviroment(animal, arboretum):
             release_animal(arboretum)
         else:
             for index, grassland in enumerate(arboretum.grasslands):
-                print(f'{index + 1}. Grassland {grassland.id}')
+                print(f'{index + 1}. Grassland ({len(grassland.contains_animals)} animals) {grassland.id}')
             print("Release the animal into which biome?")
             choice = input("> ")
             arboretum.grasslands[int(choice) - 1].add_animal(animal)
@@ -125,7 +125,7 @@ def release_into_enviroment(animal, arboretum):
             release_animal(arboretum)
         else:
             for index, mountain in enumerate(arboretum.mountains):
-                print(f'{index + 1}. Mountain {mountain.id}')
+                print(f'{index + 1}. Mountain ({len(mountain.contains_animals)} animals) {mountain.id}')
             print("Release the animal into which biome?")
             choice = input("> ")
             arboretum.mountains[int(choice) - 1].add_animal(animal)
@@ -135,7 +135,7 @@ def release_into_enviroment(animal, arboretum):
             release_animal(arboretum)
         else:
             for index, forest in enumerate(arboretum.forests):
-                print(f'{index + 1}. Forest {forest.id}')
+                print(f'{index + 1}. Forest ({len(forest.contains_animals)} animals) {forest.id}')
             print("Release the animal into which biome?")
             choice = input("> ")
             arboretum.forests[int(choice) - 1].add_animal(animal)
