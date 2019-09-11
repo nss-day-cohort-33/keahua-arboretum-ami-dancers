@@ -37,25 +37,25 @@ def cultivate_plant(arboretum):
 
     if choice2 == "1":
         for index, swamp in enumerate(arboretum.swamps):
-            print(f'{index + 1}. Swamp {swamp.id}')
+            print(f'{index + 1}. Swamp ({len(swamp.contains_plants)} plants) {swamp.id}')
         print("Release the plant into which biome?")
         choice = input("> ")
         arboretum.swamps[int(choice) - 1].add_plant(plant)
     if choice2 == "2":
         for index, grassland in enumerate(arboretum.grasslands):
-            print(f'{index + 1}. Grassland {grassland.id}')
+            print(f'{index + 1}. Grassland ({len(grassland.contains_plants)} plants) {grassland.id}')
         print("Release the plant into which biome?")
         choice = input("> ")
         arboretum.grasslands[int(choice) - 1].add_plant(plant)
     if choice2 == "3":
         for index, mountain in enumerate(arboretum.mountains):
-            print(f'{index + 1}. Mountain {mountain.id}')
+            print(f'{index + 1}. Mountain ({len(mountain.contains_plants)} plants) {mountain.id}')
         print("Release the plant into which biome?")
         choice = input("> ")
         arboretum.mountains[int(choice) - 1].add_plant(plant)
     if choice2 == "4":
         for index, forest in enumerate(arboretum.forests):
-            print(f'{index + 1}. Forest {forest.id}')
+            print(f'{index + 1}. Forest ({len(forest.contains_plants)} plants) {forest.id}')
         print("Release the plant into which biome?")
         choice = input("> ")
         arboretum.forests[int(choice) - 1].add_plant(plant)
