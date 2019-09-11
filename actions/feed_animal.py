@@ -7,6 +7,7 @@ from animals import Goose
 from animals import Kikakapu
 from animals import Spider
 
+
 def feed_animal(arboretum):
 
     print("\n1. River Dolphin")
@@ -20,7 +21,6 @@ def feed_animal(arboretum):
     print("9. Back")
 
     choice = input("\nChoose species to feed > ")
-
 
     if choice == "1":
         show_species(arboretum, "River dolphin")
@@ -43,6 +43,7 @@ def feed_animal(arboretum):
     if choice != "9":
         print('\nPlease select an animal species to feed\n')
         feed_animal(arboretum)
+
 
 def show_species(arboretum, species):
     species_list = []
