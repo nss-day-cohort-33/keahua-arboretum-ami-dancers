@@ -9,11 +9,14 @@ class Coastline(Environments, Identifiable):
         Identifiable.__init__(self)
 
     def add_animal(self, animal):
-        try:
-            if animal.aquatic and animal.hypotonic:
-                self.contains_animals.append(animal)
-        except AttributeError:
-            print("Cannot add non-aquatic, or freshwater animals to a river")
+        if len(self.contains_animals) < 16:
+            try:
+                if animal.aquatic and animal.hypotonic:
+                    self.contains_animals.append(animal)
+            except AttributeError:
+                print("Cannot add non-aquatic, or freshwater animals to a river")
+        else:
+            print("This biome contains too many animals.")
 
     # def add_plant(self, plant):
     #     try:

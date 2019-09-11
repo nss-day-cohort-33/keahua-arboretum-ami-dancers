@@ -10,15 +10,21 @@ class Forest(Environments, Identifiable):
         Identifiable.__init__(self)
 
     def add_animal(self, animal):
-        try:
-            if animal.terrestrial and animal.canopy:
-                self.contains_animals.append(animal)
-        except AttributeError:
-            print("Cannot add aquatic, or animals that require open areas.")
+        if len(self.contains_animals) < 21:
+            try:
+                if animal.terrestrial and animal.canopy:
+                    self.contains_animals.append(animal)
+            except AttributeError:
+                print("Cannot add aquatic, or animals that require open areas.")
+        else:
+            print("This biome contains too many animals.")
 
     def add_plant(self, plant):
-        try:
-            if plant.canopy:
-                self.contains_plants.append(plant)
-        except AttributeError:
-            print("Cannot add plants that require high sun.")
+        if len(self.contains_plants) < 33:
+            try:
+                if plant.canopy:
+                    self.contains_plants.append(plant)
+            except AttributeError:
+                print("Cannot add plants that require high sun.")
+        else:
+            print("This biome contains too many plants.")
