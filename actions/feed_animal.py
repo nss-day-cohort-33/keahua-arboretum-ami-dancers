@@ -101,9 +101,11 @@ def show_species(arboretum, species):
 
 
         choice3 = input(f"\nChoose what to feed the {animal.species} >    ")
-
-        if choice3 == choice3:
+        if int(choice3) <= len(animal.prey):
             animal.feed(food_items[int(choice3)-1])
+        else:
+            print(f'That was not a valid food choice. Please choose what food to feed the {animal.species}.')
+            feed_animal(arboretum)
 
 
 
