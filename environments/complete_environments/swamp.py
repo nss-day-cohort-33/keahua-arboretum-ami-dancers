@@ -11,15 +11,22 @@ class Swamp(Environments, Identifiable):
         Identifiable.__init__(self)
 
     def add_animal(self, animal):
-        try:
-            if animal.stagnate:
-                self.contains_animals.append(animal)
-        except AttributeError:
-            print("Cannot add animals that need flowing water to the swamp.")
+        if len(self.contains_animals) < 8:
+            try:
+                if animal.stagnate:
+                    self.contains_animals.append(animal)
+            except AttributeError:
+                print("Cannot add animals that need flowing water to the swamp.")
+        else:
+            print("This biome contains too many animals.")
 
     def add_plant(self, plant):
-        try:
-            if plant.stagnate:
-                self.contains_plants.append(plant)
-        except AttributeError:
-            print("Cannot add plants that require flowing water")
+        if len(self.contains_plants) < 12:
+            try:
+                if plant.stagnate:
+                    self.contains_plants.append(plant)
+            except AttributeError:
+                print("Cannot add plants that require flowing water")
+        else:
+            print("This biome contains too many plants.")
+
