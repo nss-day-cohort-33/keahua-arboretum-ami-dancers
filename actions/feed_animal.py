@@ -24,23 +24,23 @@ def feed_animal(arboretum):
 
     if choice == "1":
         show_species(arboretum, "River dolphin")
-    if choice == "2":
+    elif choice == "2":
         show_species(arboretum, "Opeapea")
-    if choice == "3":
+    elif choice == "3":
         show_species(arboretum, "Pueo")
-    if choice == "4":
+    elif choice == "4":
         show_species(arboretum, "Gold Dust Day Gecko")
-    if choice == "5":
+    elif choice == "5":
         show_species(arboretum, "'Ulae")
-    if choice == "6":
+    elif choice == "6":
         show_species(arboretum, "Nene Goose")
-    if choice == "7":
+    elif choice == "7":
         show_species(arboretum, "Kikakapu")
-    if choice == "8":
+    elif choice == "8":
         show_species(arboretum, "Hawaiian Happy Face Spider")
-    if choice == "9":
+    elif choice == "9":
         pass
-    if choice != "9":
+    else:
         print('\nPlease select an animal species to feed\n')
         feed_animal(arboretum)
 
@@ -93,20 +93,26 @@ def show_species(arboretum, species):
             for index, food in enumerate(animal.prey):
                 print(f'{index+1}. {food}')
                 food_items.append(food)
+                choice3 = input(f"\nChoose what to feed the {animal.species} >    ")
+                if int(choice3) <= len(animal.prey):
+                    animal.feed(food_items[int(choice3)-1])
+                else:
+                    print(f'That was not a valid food choice. Please choose what food to feed the {animal.species}.')
+                    feed_animal(arboretum)
         elif int(choice2) == len(true_index)+1:
             feed_animal(arboretum)
         else:
             print(f"\nThat was not a valid choice. Try again.")
-            feed_animal(arboretum)
+            show_species(arboretum, species)
 
 
 
-        choice3 = input(f"\nChoose what to feed the {animal.species} >    ")
-        if int(choice3) <= len(animal.prey):
-            animal.feed(food_items[int(choice3)-1])
-        else:
-            print(f'That was not a valid food choice. Please choose what food to feed the {animal.species}.')
-            feed_animal(arboretum)
+        # choice3 = input(f"\nChoose what to feed the {animal.species} >    ")
+        # if int(choice3) <= len(animal.prey):
+        #     animal.feed(food_items[int(choice3)-1])
+        # else:
+        #     print(f'That was not a valid food choice. Please choose what food to feed the {animal.species}.')
+        #     feed_animal(arboretum)
 
 
 
