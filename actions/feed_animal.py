@@ -40,6 +40,9 @@ def feed_animal(arboretum):
         show_species(arboretum, "Hawaiian Happy Face Spider")
     if choice == "9":
         pass
+    if choice != "9":
+        print('\nPlease select an animal species to feed\n')
+        feed_animal(arboretum)
 
 def show_species(arboretum, species):
     species_list = []
@@ -68,20 +71,34 @@ def show_species(arboretum, species):
             if animal.species == species:
                 species_list.append(animal)
     if len(species_list) == 0:
-        print(f'There are no {species}s in {arboretum.name}. Please pick a different species to feed.\n')
+        print(f'\nThere are no {species}s in {arboretum.name}. Please pick a different species to feed.\n')
         feed_animal(arboretum)
 
     else:
         food_items = []
+        true_index = []
+        print("\n")
         for index, animal in enumerate(species_list):
-            print(f'\n{index+1}. {animal.species} ({animal.id})')
+            true_index.append(index+1)
+            print(f'{index+1}. {animal.species} ({animal.id})')
+        print(f'{index+2}. Go Back')
+
+
 
         choice2 = input(f'\nChoose which {species} to feed >')
 
-        if choice2 == choice2:
+        if int(choice2) <= len(true_index):
+            print('\n')
             for index, food in enumerate(animal.prey):
-                print(f'\n{index+1}. {food}')
+                print(f'{index+1}. {food}')
                 food_items.append(food)
+        elif int(choice2) == len(true_index)+1:
+            feed_animal(arboretum)
+        else:
+            print(f"\nThat was not a valid choice. Try again.")
+            feed_animal(arboretum)
+
+
 
         choice3 = input(f"\nChoose what to feed the {animal.species} >    ")
 

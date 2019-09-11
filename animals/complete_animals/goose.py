@@ -16,7 +16,7 @@ class Goose(Animal, IFlat, Identifiable):
         return self.__prey
 
     def feed(self, prey):
-        print(f'The Nene Goose ate the {prey} for a meal')
+        print(f'\nThe Nene Goose ate the {prey} for a meal')
 
     def __str__(self):
-        return f'Nene Goose {self.id}. Watch me whip, whip'
+        return f'\nNene Goose {self.id}. Watch me whip, whip'
